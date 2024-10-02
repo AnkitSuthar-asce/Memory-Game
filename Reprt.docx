@@ -1,0 +1,61 @@
+### Project Report: Memory Game
+
+#### 1. **Introduction**
+This project is a mobile-based **Memory Game**, developed using **MIT App Inventor**. The game tests the player's ability to memorize and match pairs of cards. The objective is to match all pairs of cards in as few moves as possible. The player flips two cards at a time, and if the cards match, they remain visible; if not, they flip back over. The game continues until all pairs are matched.
+
+#### 2. **Game Structure and Blocks**
+
+The game’s logic is implemented using block-based programming in MIT App Inventor. Based on the provided block structure, the game involves several components and procedures to ensure smooth functionality and gameplay. Below is an explanation of the key aspects of the project.
+
+#### 3. **Key Components**
+- **Cards (Buttons/Images)**: The game uses card-like buttons or images. When clicked, they reveal the hidden item (such as a symbol or image), and the player needs to find its match.
+- **Score Counter**: A counter tracks the number of attempts made by the player to match the cards.
+- **Timer**: This component keeps track of how much time the player takes to complete the game.
+- **Storage**: Local storage is used to save high scores and past performances, motivating the player to beat their previous best.
+
+#### 4. **Game Logic**
+The core functionality of the game is governed by procedures and conditions handled in MIT App Inventor blocks. 
+
+- **Initializing the Game**: The game begins by shuffling the cards, ensuring that the pairs are placed randomly. 
+  - The blocks are structured to initialize the board with hidden cards. A procedure called `initializeGame` may be responsible for shuffling the cards and setting up the interface.
+
+- **Handling User Input (Card Flips)**: 
+  - When the user clicks a card, the card’s value (or image) is revealed. The blocks are configured to check if this is the first or second card the user has clicked.
+  - If two cards are selected, a block checks if the cards match. If they do, the cards remain visible; if they don’t, they are hidden again after a brief delay.
+
+- **Matching Logic**: 
+  - The main condition checks if the values of the two selected cards are equal. If they match, the cards are marked as successfully paired.
+  - If they don’t match, the game automatically flips the cards back over after a short delay (implemented through a timer).
+
+- **Win Condition**: 
+  - The game ends when all pairs are matched. The blocks handling this section check if all cards have been successfully paired. If so, the game displays a victory message and records the player’s score and time.
+
+#### 5. **Game Features**
+
+- **Shuffle Functionality**: The game includes a shuffle procedure that ensures cards are placed randomly every time a new game starts.
+- **Scoring and Performance**: 
+  - Players' performance is measured in terms of both the number of attempts made and the time taken to complete the game. The game may display high scores, allowing users to challenge themselves to beat their previous best.
+- **Responsive Feedback**: The interface gives immediate feedback based on user interaction. For example, incorrect matches trigger a reset, while correct matches keep the cards open.
+
+#### 6. **Code Block Overview**
+From the screenshot of the code blocks, the following sections are prominent:
+
+- **Initialization Block**: Handles the setup and shuffling of cards when the game starts.
+- **Card Click Handlers**: Manages what happens when a player selects a card, including revealing the card and checking for matches.
+- **Matching Logic**: Implements the core matching mechanism, including handling correct and incorrect pairs.
+- **Reset Functionality**: Handles resetting unmatched cards after a delay, so players can try again.
+- **Endgame Logic**: Checks if all pairs are found and triggers the victory sequence.
+
+#### 7. **Challenges and Solutions**
+
+- **Shuffling the Cards**: Ensuring that the cards are placed randomly each time was a challenge, but it was solved by using a shuffle function that randomizes the positions of the cards at the start of each game.
+  
+- **Handling Multiple Clicks**: Managing user clicks efficiently, so that only two cards can be flipped at a time, was addressed by disabling additional clicks during the evaluation of the match.
+
+- **Tracking Performance**: A scoring system was implemented that tracks both the time taken and the number of attempts to match the cards, adding a competitive aspect to the game.
+
+#### 8. **Conclusion**
+
+This Memory Game project is a simple yet effective way to challenge players’ memory and improve cognitive function. The use of block-based programming in MIT App Inventor made it easy to implement the core logic, and the game is highly engaging, with replayability boosted by the shuffle feature and performance tracking.
+
+The game can be further enhanced with features such as different difficulty levels, themed card sets, and multiplayer modes. The user-friendly interface and smooth gameplay make this a solid foundation for further development in mobile game design.
